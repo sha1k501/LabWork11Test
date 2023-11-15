@@ -1,12 +1,13 @@
 data class WorksList(
-    var worksCode:String = "",
-    var worksName:String = "",
-    var worksGenre:String = "",
-    var worksAuthor:String = "")
+    var worksCode: String = "",
+    var worksName: String = "",
+    var worksGenre: String = "",
+    var worksAuthor: String = ""
+)
 
 object TestCases {
 
-        fun getWorksInfo(nameLiteratureText: String, genreLiteratureText: String, authorLiteratureText: String): Int {
+    fun getWorksInfo(nameLiteratureText: String, genreLiteratureText: String, authorLiteratureText: String): Int {
         val nameLength = nameLiteratureText.length
         val genreLength = genreLiteratureText.length
         val authorLength = authorLiteratureText.length
@@ -25,30 +26,29 @@ object TestCases {
         return 1
     }
 
-   fun main(args: Array<String>) {
-      val result1 = getWorksInfo("Двадцять тисяч льє під водою", "Наукова фантастика", "Жюль Верн")
-      println("TC1: Двадцять тисяч льє під водою, Наукова фантастика, Жюль Верн ${
-          if (result1 == 1) "Passed = 1" else "Failed"
-      }")
+    fun main() {
+        val result1 = getWorksInfo("Двадцять тисяч льє під водою", "Наукова фантастика", "Жюль Верн")
+        println("TC1: Двадцять тисяч льє під водою, Наукова фантастика, Жюль Верн ${
+            if (result1 == 1) "Passed = 1" else "Failed"
+        }")
 
-      val result2 = getWorksInfo("20000 льє під водою", "Наукова фантастика", "Жюль Верн")
-      println("TC2: ${
-          if (result2 == -1) "Passed = -1" else "Failed"
-      }")
+        val result2 = getWorksInfo("20000 льє під водою", "Наукова фантастика", "Жюль Верн")
+        println("TC2: ${
+            if (result2 == -1) "Passed = -1" else "Failed"
+        }")
 
-      val result3 = getWorksInfo("Двадцять тисяч льє під водою", "123", "Жюль Верн")
-      println("TC3: ${
-          if (result3 == -2) "Passed = -2" else "Failed"
-      }")
+        val result3 = getWorksInfo("Двадцять тисяч льє під водою", "123", "Жюль Верн")
+        println("TC3: ${
+            if (result3 == -2) "Passed = -2" else "Failed"
+        }")
 
-      val result4 = getWorksInfo("Двадцять тисяч льє під водою", "Наукова фантастика", "1Жюль Верн")
-      println("TC4: ${
-          if (result4 == -3) "Passed = -3" else "Failed"
-      }")
+        val result4 = getWorksInfo("Двадцять тисяч льє під водою", "Наукова фантастика", "1Жюль Верн")
+        println("TC4: ${
+            if (result4 == -3) "Passed = -3" else "Failed"
+        }")
 
-      if (1 != result1 || -1 != result2 || -2 != result3 || -3 != result4) {
+        if (1 != result1 || -1 != result2 || -2 != result3 || -3 != result4) {
             System.exit(-1)
-      }
-   }
+        }
+    }
 }
-
