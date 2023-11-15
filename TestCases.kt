@@ -1,3 +1,5 @@
+package com.nuop.tscp
+
 data class WorksList(
     var worksCode: String = "",
     var worksName: String = "",
@@ -26,7 +28,8 @@ object TestCases {
         return 1
     }
 
-    fun main() {
+    @JvmStatic
+    fun main(args: Array<String>) {
         val result1 = getWorksInfo("Двадцять тисяч льє під водою", "Наукова фантастика", "Жюль Верн")
         println("TC1: Двадцять тисяч льє під водою, Наукова фантастика, Жюль Верн ${
             if (result1 == 1) "Passed = 1" else "Failed"
