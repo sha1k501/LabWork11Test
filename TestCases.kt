@@ -14,15 +14,15 @@ object TestCases {
         val genreLength = genreLiteratureText.length
         val authorLength = authorLiteratureText.length
 
-        if (nameLength < 1 && nameLength > 50) {
+        if (nameLength < 1 || nameLength > 50) {
             return -1 // Назва не відповідає умові або умовам
         }
 
-        if (genreLength < 1 && genreLength > 20) {
+        if (genreLength < 1 || genreLength > 20) {
             return -2 // Жанр не відповідає умові або умовам
         }
 
-        if (authorLength < 1 && authorLength > 20) {
+        if (authorLength < 1 || authorLength > 20) {
             return -3 // Автор не відповідає умові або умовам
         }
         return 1
