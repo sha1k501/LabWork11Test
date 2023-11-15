@@ -7,15 +7,19 @@ data class WorksList(
 object TestCases {
 
         fun getWorksInfo(nameLiteratureText: String, genreLiteratureText: String, authorLiteratureText: String): Int {
-        if (nameLiteratureText > 1 && nameLiteratureText < 50) {
+        val nameLength = nameLiteratureText.length
+        val genreLength = genreLiteratureText.length
+        val authorLength = authorLiteratureText.length
+
+        if (nameLength > 1 && nameLength < 50) {
             return -1 // Назва не відповідає умові або умовам
         }
 
-        if (genreLiteratureText > 1 && genreLiteratureText < 20) {
+        if (genreLength > 1 && genreLength < 20) {
             return -2 // Жанр не відповідає умові або умовам
         }
 
-        if (authorLiteratureText > 1 && authorLiteratureText < 20) {
+        if (authorLength > 1 && authorLength < 20) {
             return -3 // Автор не відповідає умові або умовам
         }
         return 1
