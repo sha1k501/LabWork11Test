@@ -28,6 +28,7 @@ object TestCases {
         return 1
     }
 
+    @JvmStatic
     fun main(args: Array<String>) {
         val result1 = getWorksInfo("Двадцять тисяч льє під водою", "Наукова фантастика", "Жюль Верн")
         println("TC1: ${
