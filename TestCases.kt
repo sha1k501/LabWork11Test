@@ -35,17 +35,17 @@ object TestCases {
             if (result1 == 1) "Passed = 1" else "Failed"
         }")
 
-        val result2 = getWorksInfo("20000 льє під водою", "Наукова фантастика", "Жюль Верн")
+        val result2 = getWorksInfo("Двадцять тисяч льє під водоюДвадцять тисяч льє під водоюДвадцять тисяч льє під водою", "Наукова фантастика", "Жюль Верн")
         println("TC2: ${
             if (result2 == -1) "Passed = -1" else "Failed"
         }")
 
-        val result3 = getWorksInfo("Двадцять тисяч льє під водою", "123", "Жюль Верн")
+        val result3 = getWorksInfo("Двадцять тисяч льє під водою", "Наукова фантастикаНаукова фантастикаНаукова фантастика", "Жюль Верн")
         println("TC3: ${
             if (result3 == -2) "Passed = -2" else "Failed"
         }")
 
-        val result4 = getWorksInfo("Двадцять тисяч льє під водою", "Наукова фантастика", "1Жюль Верн")
+        val result4 = getWorksInfo("Двадцять тисяч льє під водою", "Наукова фантастика", "Жюль ВернЖюль ВернЖюль ВернЖюль ВернЖюль Верн")
         println("TC4: ${
             if (result4 == -3) "Passed = -3" else "Failed"
         }")
