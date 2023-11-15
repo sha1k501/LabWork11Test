@@ -28,14 +28,13 @@ object TestCases {
         return 1
     }
 
-    @JvmStatic
     fun main(args: Array<String>) {
         val result1 = getWorksInfo("Двадцять тисяч льє під водою", "Наукова фантастика", "Жюль Верн")
         println("TC1: ${
             if (result1 == 1) "Passed = 1" else "Failed"
         }")
 
-        val result2 = getWorksInfo("Двадцять тисяч льє під водоюДвадцять тисяч льє під водоюДвадцять тисяч льє під водою", "Наукова фантастика", "Жюль Верн")
+        val result2 = getWorksInfo("20000 льє під водою", "Наукова фантастика", "Жюль Верн")
         println("TC2: ${
             if (result2 == -1) "Passed = -1" else "Failed"
         }")
